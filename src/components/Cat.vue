@@ -9,7 +9,9 @@
     {{age}} ({{cat.AgeGroup}})
     </div>
     <div class="img">
-      <img :src="cat.Photo">
+    <div v-if="!(cat.Photo == 'http://media.petango.com/webservices/adoptablesearch/images/Photo-Not-Available-cat.gif')">
+      <img :src="cat.Photo" >
+    </div>
     </div>
   </div>
 </template>
